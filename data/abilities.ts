@@ -5706,4 +5706,32 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: -3,
 	},
+	
+	// ZZZ Signature Abilities
+	voltagesurge: { // Boosts electric moves and critical damage. Silver Anby
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Voltage Surge boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Voltage Surge boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				this.debug('Sniper boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Voltage Surge",
+		rating: 4,
+		num: -4,
+	},
 };
