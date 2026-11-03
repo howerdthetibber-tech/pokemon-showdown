@@ -21302,4 +21302,43 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Fire",
 		contestType: "Beautiful",
 	},
+
+	// Put ZZZ Signature moves under here
+	boltslice: { // Anby's Signature Move
+		num: -4,
+		accuracy: 90,
+		basePower: 70,
+		category: "Physical",
+		name: "Bolt Slice",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondaries: [
+			{
+				chance: 50,
+				status: 'par',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+
+	plasmaslice: { // Anby Silver Signature Move
+		num: -5,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Plasma Slice",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, slicing: 1},
+		critRatio: 2,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
 };
