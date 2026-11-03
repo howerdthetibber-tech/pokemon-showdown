@@ -21070,4 +21070,35 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+	
+	// ZZZ Characters
+	anby: {
+		num: -5002,
+		name: "Anby Demara",
+		types: ["Electric"],
+		gender: "F",
+		baseStats: { hp: 87, atk: 115, def: 68, spa: 13, spd: 90, spe: 107 },
+		abilities: { 0: "Inner Focus", H: "Soundproof" },
+		heightm: 1.56,
+		weightkg: 50, // A GUESS
+		color: "Green",
+		otherFormes: ["Soldier 0 - Anby"], // Silver Anby later
+		formeOrder: ["Anby Demara", "Soldier 0 - Anby"], // Silver Anby Later
+		eggGroups: ["Undiscovered"], 
+	},
+
+	anbysilver: {
+		num: -5002,
+		name: "Soldier 0 - Anby",
+		types: ["Electric", "Fighting"],
+		gender: "F",
+		baseStats: { hp: 87, atk: 125, def: 60, spa: 80, spd: 100, spe: 128 },
+		abilities: { 0: "Voltage Surge", H: "Defiant" },
+		heightm: 1.56,
+		weightkg: 50, // A GUESS
+		color: "White",
+		otherFormes: ["Soldier 0 - Anby"], // Silver Anby later
+		formeOrder: ["Anby Demara", "Soldier 0 - Anby"], // Silver Anby Later
+		eggGroups: ["Undiscovered"], 
+	},
 };
